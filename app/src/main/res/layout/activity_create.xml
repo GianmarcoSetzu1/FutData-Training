@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/sfondo">
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000"
+        android:alpha="0.5"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:textColor="#A6A071"
+        style="@style/TextAppearance.AppCompat.Headline"
+        android:fontFamily="serif-monospace"
+        android:textStyle="bold"
+        android:text="FutData Training"
+        android:id="@+id/title"
+        android:textSize="40dp"/>
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/nuovoAllenamento"
+        android:text="Nuovo Allenamento"
+        android:fontFamily="serif-monospace"
+        android:textStyle="bold"
+        android:layout_below="@+id/title"
+        android:textSize="25sp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="25dp"
+        android:textColor="#FFFFFF" />
+
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nuovoAllenamento"
+        android:layout_marginLeft="20dp"
+        android:hint="Nome Atleta"
+        android:textColorHint="#939292"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="15dp"
+        android:id="@+id/nome"/>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nuovoAllenamento"
+        android:layout_marginTop="10dp"
+        android:textSize="15dp"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@+id/nome"
+        android:text="Salva"
+        android:textColor="#FFFFFF"
+        android:background="#0E0223"
+        android:id="@+id/salva"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="80dp"
+        android:layout_marginTop="30dp"
+        android:textColor="#FFFFFF"
+        android:background="#413143"
+        android:alpha="0.7"
+        android:layout_below="@+id/nome"
+        android:text="Aggiungi Attività"
+        android:textSize="20dp"
+        android:id="@+id/nuovaAttivita" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nuovaAttivita"
+        android:hint="Attività 1"
+        android:textColorHint="#939292"
+        android:layout_margin="20dp"
+        android:textColor="#FFFFFF"
+        android:id="@+id/attivita1"
+        android:visibility="invisible"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/attivita1"
+        android:hint="Attività 2"
+        android:textColorHint="#939292"
+        android:layout_margin="20dp"
+        android:textColor="#FFFFFF"
+        android:id="@+id/attivita2"
+        android:visibility="invisible"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/attivita2"
+        android:hint="Attività 3"
+        android:textColorHint="#939292"
+        android:layout_margin="20dp"
+        android:textColor="#FFFFFF"
+        android:id="@+id/attivita3"
+        android:visibility="invisible"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/attivita3"
+        android:layout_marginHorizontal="100dp"
+        android:gravity="center"
+        android:textSize="15dp"
+        android:text="Aggiungi"
+        android:textColor="#FFFFFF"
+        android:background="#0E0223"
+        android:id="@+id/aggiungi"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/aggiunti"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""/>
+
+</RelativeLayout>
+
+
+

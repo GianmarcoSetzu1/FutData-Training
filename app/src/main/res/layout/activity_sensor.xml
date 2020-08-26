@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SensorActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/sfondo"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#000000"
+            android:alpha="0.5"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:textColor="#A6A071"
+            style="@style/TextAppearance.AppCompat.Headline"
+            android:fontFamily="serif-monospace"
+            android:textStyle="bold"
+            android:text="FutData Training"
+            android:id="@+id/title"
+            android:textSize="40dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#A6A071"
+            android:textSize="25dp"
+            android:layout_below="@+id/title"
+            android:text="Nome Atleta"
+            android:layout_margin="10dp"
+            android:id="@+id/nameAtleta"/>
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nameAtleta"
+            android:layout_margin="20dp"
+            android:id="@+id/listaAttivita"
+            android:clickable="false"/>
+
+    <TextView
+        android:id="@+id/quality"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Qualità"
+        android:layout_margin="10dp"
+        android:textAlignment="center"
+        android:textColor="#DDDDB6"
+        android:fontFamily="serif-monospace"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:clickable="false"
+        android:layout_below="@+id/listaAttivita"
+        android:visibility="invisible"/>
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        style="@style/SeekBarColor"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/quality"
+        android:visibility="invisible"/>
+
+    <Button
+        android:id="@+id/saveMeasuring"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginHorizontal="50dp"
+        android:alpha="0.9"
+        android:background="#38263A"
+        android:text="SALVA"
+        android:textSize="30dp"
+        android:textAlignment="center"
+        android:textColor="#DDDBC5"
+        android:visibility="invisible"
+        android:onClick="export"
+        android:layout_below="@+id/seekBar"/>
+
+    <Button
+        android:id="@+id/stopMeasuring"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_weight="66.6"
+        android:alpha="0.9"
+        android:background="#38263A"
+        android:gravity="center"
+        android:text="STOP"
+        android:textSize="30dp"
+        android:textAlignment="center"
+        android:textColor="#DDDBC5"
+        android:visibility="invisible"
+        android:onClick="stopMeasuring"
+        android:layout_below="@+id/listaAttivita"/>
+
+    <TextView
+        android:id="@+id/connesso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        tools:ignore="MissingConstraints" />
+
+</RelativeLayout>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/sfondo"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000"
+        android:alpha="0.5"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:textColor="#A6A071"
+        style="@style/TextAppearance.AppCompat.Headline"
+        android:fontFamily="serif-monospace"
+        android:textStyle="bold"
+        android:text="FutData Training"
+        android:id="@+id/title"
+        android:textSize="40dp"/>
+
+    <TextView
+        android:layout_width="165dp"
+        android:layout_height="40dp"
+        android:text="Bluetooth"
+        android:fontFamily="serif-monospace"
+        android:textStyle="bold"
+        android:layout_below="@+id/title"
+        android:textSize="25sp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="25dp"
+        android:textColor="#FFFFFF"/>
+
+    <Switch
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:textSize="15dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="25dp"
+        android:id="@+id/avvia"
+        style="@style/SwitchStyle"/>
+
+    <TextView
+        android:layout_width="265dp"
+        android:layout_height="40dp"
+        android:fontFamily="serif-monospace"
+        android:textStyle="bold"
+        android:text="Abilita ricerca"
+        android:layout_below="@+id/avvia"
+        android:textSize="25sp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="25dp"
+        android:textColor="#FFFFFF"/>
+
+    <Switch
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/avvia"
+        android:textSize="15dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="25dp"
+        android:id="@+id/btnDiscoverable_on_off"
+        style="@style/SwitchStyle"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="80dp"
+        android:layout_marginTop="30dp"
+        android:textColor="#FFFFFF"
+        android:background="#413143"
+        android:alpha="0.7"
+        android:id="@+id/btnFindUnpairedDevices"
+        android:layout_below="@+id/btnDiscoverable_on_off"
+        android:text="Cerca Sensore"
+        android:textSize="20dp"
+        android:onClick="btnDiscover"/>
+
+    <ListView
+        android:layout_below="@id/btnFindUnpairedDevices"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:id="@+id/lvNewDevices"/>
+
+    <TextView
+        android:id="@+id/errore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""/>
+
+</RelativeLayout>
